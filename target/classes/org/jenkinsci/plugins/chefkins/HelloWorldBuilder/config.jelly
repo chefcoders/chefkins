@@ -13,4 +13,26 @@
   <f:entry title="Name" field="name">
     <f:textbox />
   </f:entry>
+
+<f:section title="Hello World Builder">
+	<!--
+		Optional @help points to the help document HTML. /plugin/jjlink
+		is mapped to our webapp/ directory, so this is a convenient way to serve
+		static resources.
+	-->
+	<f:entry title="French"
+	description="Check if we should say hello in French"
+	help="/plugin/jjlink/help-globalConfig.html">
+	<!--
+	We'll have on input field. The 'descriptor' variable represents our descriptor
+	object, so we use that to determine the initial value for this form.
+	-->
+	<f:checkbox name="useFrench" checked="${descriptor.useFrench()}" />
+	</f:entry>
+</f:section>
+
+
+
+
+
 </j:jelly>
